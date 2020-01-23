@@ -45,7 +45,8 @@ const account = {
      */
     deposit(amount) {
         this.balance += amount;
-        this.transactions.push(this.createTransaction(amount, 'deposit'));
+        this.transactions = [...this.transactions, this.createTransaction(amount, 'deposit')];
+        // this.transactions.push(this.createTransaction(amount, 'deposit'));
     },
 
     /*
