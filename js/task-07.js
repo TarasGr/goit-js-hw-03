@@ -29,7 +29,8 @@ const account = {
      */
     createTransaction(amount, type) {
         const transactions = {
-            id: this.transactions.length + 1,
+            id: Date.now(),
+            // id: this.transactions.length + 1, this case for checking method getTransactionDetails
             type,
             amount
         }
@@ -103,19 +104,19 @@ const account = {
     },
 };
 
-console.log(account.deposit(100));
-console.log(account.deposit(1000));
-console.log(account.withdraw(300));
-console.log(account.deposit(500));
-console.log(account.deposit(400));
-console.log(account.withdraw(350));
-console.log(account.deposit(5000));
-console.log(account.withdraw(100));
-console.log(account.deposit(300));
-console.log(account.withdraw(3000));
+account.deposit(100);
+account.deposit(1000);
+account.withdraw(300);
+account.deposit(500);
+account.deposit(400);
+account.withdraw(350);
+account.deposit(5000);
+account.withdraw(100);
+account.deposit(300);
+account.withdraw(3000);
 
 console.log(account.getBalance());
-console.log(account.getTransactionDetails(7));
+console.log(account.getTransactionDetails(1579808189144));
 console.log(account.getTransactionTotal(Transaction.DEPOSIT));
 console.log(account.getTransactionTotal(Transaction.WITHDRAW));
 

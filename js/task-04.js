@@ -13,7 +13,7 @@ const countTotalSalary = function (employees) {
 
     // or
     const empl = Object.values(employees);
-    let total = empl.reduce((sum, next) => sum + next, 0);
+    const total = empl.reduce((sum, next) => sum + next, 0);
     return total;
 };
 /*
